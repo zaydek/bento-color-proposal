@@ -1,0 +1,470 @@
+.text-green-50 {
+  color: rgba(236, 253, 245, var(--text-opacity));
+}
+
+.text-green-100 {
+  color: rgba(209, 250, 229, var(--text-opacity));
+}
+
+.text-green-200 {
+  color: rgba(167, 243, 208, var(--text-opacity));
+}
+
+.text-green-300 {
+  color: rgba(110, 231, 183, var(--text-opacity));
+}
+
+.text-green-400 {
+  color: rgba(52, 211, 153, var(--text-opacity));
+}
+
+.text-green-500 {
+  color: rgba(16, 185, 129, var(--text-opacity));
+}
+
+.text-green-600 {
+  color: rgba(5, 150, 105, var(--text-opacity));
+}
+
+.text-green-700 {
+  color: rgba(4, 120, 87, var(--text-opacity));
+}
+
+.text-green-800 {
+  color: rgba(6, 95, 70, var(--text-opacity));
+}
+
+.text-green-900 {
+  color: rgba(6, 78, 59, var(--text-opacity));
+}
+
+.text-opacity-0 {
+  --text-opacity: 0;
+}
+
+.text-opacity-25 {
+  --text-opacity: 0.25;
+}
+
+.text-opacity-100 {
+  --text-opacity: 1;
+}
+
+.bg-green-50 {
+  color: rgba(236, 253, 245, var(--text-opacity));
+}
+
+.bg-green-100 {
+  color: rgba(209, 250, 229, var(--text-opacity));
+}
+
+.bg-green-200 {
+  color: rgba(167, 243, 208, var(--text-opacity));
+}
+
+.bg-green-300 {
+  color: rgba(110, 231, 183, var(--text-opacity));
+}
+
+.bg-green-400 {
+  color: rgba(52, 211, 153, var(--text-opacity));
+}
+
+.bg-green-500 {
+  color: rgba(16, 185, 129, var(--text-opacity));
+}
+
+.bg-green-600 {
+  color: rgba(5, 150, 105, var(--text-opacity));
+}
+
+.bg-green-700 {
+  color: rgba(4, 120, 87, var(--text-opacity));
+}
+
+.bg-green-800 {
+  color: rgba(6, 95, 70, var(--text-opacity));
+}
+
+.bg-green-900 {
+  color: rgba(6, 78, 59, var(--text-opacity));
+}
+
+.bg-opacity-0 {
+  --bg-opacity: 0;
+}
+
+.bg-opacity-25 {
+  --bg-opacity: 0.25;
+}
+
+.bg-opacity-100 {
+  --bg-opacity: 1;
+}
+
+.border-green-50 {
+  color: rgba(236, 253, 245, var(--text-opacity));
+}
+
+.border-green-100 {
+  color: rgba(209, 250, 229, var(--text-opacity));
+}
+
+.border-green-200 {
+  color: rgba(167, 243, 208, var(--text-opacity));
+}
+
+.border-green-300 {
+  color: rgba(110, 231, 183, var(--text-opacity));
+}
+
+.border-green-400 {
+  color: rgba(52, 211, 153, var(--text-opacity));
+}
+
+.border-green-500 {
+  color: rgba(16, 185, 129, var(--text-opacity));
+}
+
+.border-green-600 {
+  color: rgba(5, 150, 105, var(--text-opacity));
+}
+
+.border-green-700 {
+  color: rgba(4, 120, 87, var(--text-opacity));
+}
+
+.border-green-800 {
+  color: rgba(6, 95, 70, var(--text-opacity));
+}
+
+.border-green-900 {
+  color: rgba(6, 78, 59, var(--text-opacity));
+}
+
+.border-opacity-0 {
+  --border-opacity: 0;
+}
+
+.border-opacity-25 {
+  --border-opacity: 0.25;
+}
+
+.border-opacity-100 {
+  --border-opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .sm:text-green-50 {
+    color: rgba(236, 253, 245, var(--text-opacity));
+  }
+
+  .sm:text-green-100 {
+    color: rgba(209, 250, 229, var(--text-opacity));
+  }
+
+  .sm:text-green-200 {
+    color: rgba(167, 243, 208, var(--text-opacity));
+  }
+
+  .sm:text-green-300 {
+    color: rgba(110, 231, 183, var(--text-opacity));
+  }
+
+  .sm:text-green-400 {
+    color: rgba(52, 211, 153, var(--text-opacity));
+  }
+
+  .sm:text-green-500 {
+    color: rgba(16, 185, 129, var(--text-opacity));
+  }
+
+  .sm:text-green-600 {
+    color: rgba(5, 150, 105, var(--text-opacity));
+  }
+
+  .sm:text-green-700 {
+    color: rgba(4, 120, 87, var(--text-opacity));
+  }
+
+  .sm:text-green-800 {
+    color: rgba(6, 95, 70, var(--text-opacity));
+  }
+
+  .sm:text-green-900 {
+    color: rgba(6, 78, 59, var(--text-opacity));
+  }
+
+  .sm:text-opacity-0 {
+    --text-opacity: 0;
+  }
+
+  .sm:text-opacity-25 {
+    --text-opacity: 0.25;
+  }
+
+  .sm:text-opacity-100 {
+    --text-opacity: 1;
+  }
+
+  .sm:bg-green-50 {
+    color: rgba(236, 253, 245, var(--text-opacity));
+  }
+
+  .sm:bg-green-100 {
+    color: rgba(209, 250, 229, var(--text-opacity));
+  }
+
+  .sm:bg-green-200 {
+    color: rgba(167, 243, 208, var(--text-opacity));
+  }
+
+  .sm:bg-green-300 {
+    color: rgba(110, 231, 183, var(--text-opacity));
+  }
+
+  .sm:bg-green-400 {
+    color: rgba(52, 211, 153, var(--text-opacity));
+  }
+
+  .sm:bg-green-500 {
+    color: rgba(16, 185, 129, var(--text-opacity));
+  }
+
+  .sm:bg-green-600 {
+    color: rgba(5, 150, 105, var(--text-opacity));
+  }
+
+  .sm:bg-green-700 {
+    color: rgba(4, 120, 87, var(--text-opacity));
+  }
+
+  .sm:bg-green-800 {
+    color: rgba(6, 95, 70, var(--text-opacity));
+  }
+
+  .sm:bg-green-900 {
+    color: rgba(6, 78, 59, var(--text-opacity));
+  }
+
+  .sm:bg-opacity-0 {
+    --bg-opacity: 0;
+  }
+
+  .sm:bg-opacity-25 {
+    --bg-opacity: 0.25;
+  }
+
+  .sm:bg-opacity-100 {
+    --bg-opacity: 1;
+  }
+
+  .sm:border-green-50 {
+    color: rgba(236, 253, 245, var(--text-opacity));
+  }
+
+  .sm:border-green-100 {
+    color: rgba(209, 250, 229, var(--text-opacity));
+  }
+
+  .sm:border-green-200 {
+    color: rgba(167, 243, 208, var(--text-opacity));
+  }
+
+  .sm:border-green-300 {
+    color: rgba(110, 231, 183, var(--text-opacity));
+  }
+
+  .sm:border-green-400 {
+    color: rgba(52, 211, 153, var(--text-opacity));
+  }
+
+  .sm:border-green-500 {
+    color: rgba(16, 185, 129, var(--text-opacity));
+  }
+
+  .sm:border-green-600 {
+    color: rgba(5, 150, 105, var(--text-opacity));
+  }
+
+  .sm:border-green-700 {
+    color: rgba(4, 120, 87, var(--text-opacity));
+  }
+
+  .sm:border-green-800 {
+    color: rgba(6, 95, 70, var(--text-opacity));
+  }
+
+  .sm:border-green-900 {
+    color: rgba(6, 78, 59, var(--text-opacity));
+  }
+
+  .sm:border-opacity-0 {
+    --border-opacity: 0;
+  }
+
+  .sm:border-opacity-25 {
+    --border-opacity: 0.25;
+  }
+
+  .sm:border-opacity-100 {
+    --border-opacity: 1;
+  }
+}
+@media (min-width: 1280px) {
+  .xl:text-green-50 {
+    color: rgba(236, 253, 245, var(--text-opacity));
+  }
+
+  .xl:text-green-100 {
+    color: rgba(209, 250, 229, var(--text-opacity));
+  }
+
+  .xl:text-green-200 {
+    color: rgba(167, 243, 208, var(--text-opacity));
+  }
+
+  .xl:text-green-300 {
+    color: rgba(110, 231, 183, var(--text-opacity));
+  }
+
+  .xl:text-green-400 {
+    color: rgba(52, 211, 153, var(--text-opacity));
+  }
+
+  .xl:text-green-500 {
+    color: rgba(16, 185, 129, var(--text-opacity));
+  }
+
+  .xl:text-green-600 {
+    color: rgba(5, 150, 105, var(--text-opacity));
+  }
+
+  .xl:text-green-700 {
+    color: rgba(4, 120, 87, var(--text-opacity));
+  }
+
+  .xl:text-green-800 {
+    color: rgba(6, 95, 70, var(--text-opacity));
+  }
+
+  .xl:text-green-900 {
+    color: rgba(6, 78, 59, var(--text-opacity));
+  }
+
+  .xl:text-opacity-0 {
+    --text-opacity: 0;
+  }
+
+  .xl:text-opacity-25 {
+    --text-opacity: 0.25;
+  }
+
+  .xl:text-opacity-100 {
+    --text-opacity: 1;
+  }
+
+  .xl:bg-green-50 {
+    color: rgba(236, 253, 245, var(--text-opacity));
+  }
+
+  .xl:bg-green-100 {
+    color: rgba(209, 250, 229, var(--text-opacity));
+  }
+
+  .xl:bg-green-200 {
+    color: rgba(167, 243, 208, var(--text-opacity));
+  }
+
+  .xl:bg-green-300 {
+    color: rgba(110, 231, 183, var(--text-opacity));
+  }
+
+  .xl:bg-green-400 {
+    color: rgba(52, 211, 153, var(--text-opacity));
+  }
+
+  .xl:bg-green-500 {
+    color: rgba(16, 185, 129, var(--text-opacity));
+  }
+
+  .xl:bg-green-600 {
+    color: rgba(5, 150, 105, var(--text-opacity));
+  }
+
+  .xl:bg-green-700 {
+    color: rgba(4, 120, 87, var(--text-opacity));
+  }
+
+  .xl:bg-green-800 {
+    color: rgba(6, 95, 70, var(--text-opacity));
+  }
+
+  .xl:bg-green-900 {
+    color: rgba(6, 78, 59, var(--text-opacity));
+  }
+
+  .xl:bg-opacity-0 {
+    --bg-opacity: 0;
+  }
+
+  .xl:bg-opacity-25 {
+    --bg-opacity: 0.25;
+  }
+
+  .xl:bg-opacity-100 {
+    --bg-opacity: 1;
+  }
+
+  .xl:border-green-50 {
+    color: rgba(236, 253, 245, var(--text-opacity));
+  }
+
+  .xl:border-green-100 {
+    color: rgba(209, 250, 229, var(--text-opacity));
+  }
+
+  .xl:border-green-200 {
+    color: rgba(167, 243, 208, var(--text-opacity));
+  }
+
+  .xl:border-green-300 {
+    color: rgba(110, 231, 183, var(--text-opacity));
+  }
+
+  .xl:border-green-400 {
+    color: rgba(52, 211, 153, var(--text-opacity));
+  }
+
+  .xl:border-green-500 {
+    color: rgba(16, 185, 129, var(--text-opacity));
+  }
+
+  .xl:border-green-600 {
+    color: rgba(5, 150, 105, var(--text-opacity));
+  }
+
+  .xl:border-green-700 {
+    color: rgba(4, 120, 87, var(--text-opacity));
+  }
+
+  .xl:border-green-800 {
+    color: rgba(6, 95, 70, var(--text-opacity));
+  }
+
+  .xl:border-green-900 {
+    color: rgba(6, 78, 59, var(--text-opacity));
+  }
+
+  .xl:border-opacity-0 {
+    --border-opacity: 0;
+  }
+
+  .xl:border-opacity-25 {
+    --border-opacity: 0.25;
+  }
+
+  .xl:border-opacity-100 {
+    --border-opacity: 1;
+  }
+}

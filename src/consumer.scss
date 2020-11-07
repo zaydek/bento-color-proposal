@@ -1,0 +1,30 @@
+// prettier-ignore
+$rgb-map: (
+	"green-50": (236, 253, 245),
+	"green-100": (209, 250, 229),
+	"green-200": (167, 243, 208),
+	"green-300": (110, 231, 183),
+	"green-400": (52, 211, 153),
+	"green-500": (16, 185, 129),
+	"green-600": (5, 150, 105),
+	"green-700": (4, 120, 87),
+	"green-800": (6, 95, 70),
+	"green-900": (6, 78, 59),
+);
+
+@use "provider" with (
+	$rgb-map: $rgb-map,
+	$opacity-range: (
+		0,
+		0.25,
+		1,
+	),
+	$breakpoint-map: (
+		sm: 40 * 16, // ->  640
+		xl: 80 * 16, // -> 1280
+	),
+);
+
+@at-root {
+	@include provider.run;
+}

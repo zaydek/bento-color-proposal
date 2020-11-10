@@ -1,5 +1,5 @@
 {
-	"name": "bento-color-proposal",
+	"name": "duomo-color-proposal",
 	"license": "MIT",
 	"scripts": {
 		"start": "sass --no-source-map src/consumer.scss src/out.css"

@@ -7,6 +7,6 @@
 		1,
 	),
 	$breakpoint-map: (
-		xl: 1344,
+		xl: config.$xl + 64,
 	),
 );

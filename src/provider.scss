@@ -1,169 +1,78 @@
-@use "sass:list";
+@use "sass:color";
 @use "sass:map";
+@use "sass:string";
 
-$separator: ":";
+$breakpoint-map: () !default;
+$color-map: () !default;
+$opacity-range: () !default;
 
-@function get-dynamic-ampersand() {
+@function escape($any) {
+	$str: "" + $any;
+	$escaped: "";
+	@for $x from 1 through string.length($str) {
+		$ch: string.slice($str, $x, $x);
+		@if $ch == "." {
+			$escaped: $escaped + "\\"+ $ch;
+		} @else {
+			$escaped: $escaped + $ch;
+		}
+	}
+	@return $escaped;
+}
+
+$separator: "\\:";
+
+@function get-ampersand() {
 	@if not & {
 		@return ".";
 	}
 	@return & + $separator;
 }
 
-@function new-rgba-map($rgb-map, $alpha) {
-	$merged: ();
-	@each $k, $v in $rgb-map {
-		$to-merge: ();
-		@if $v == transparent or $v == currentColor {
-			$to-merge: (#{$k}: #{$v});
-		} @else {
-			$to-merge: (#{$k}: rgba(list.nth($v, 1), list.nth($v, 2), list.nth($v, 3), #{$alpha}));
-		}
-		$merged: map.merge($merged, $to-merge);
-	}
-	@return $merged;
-}
+@mixin generate-colors-from-map($shorthand, $prop, $map, $opacity-range) {
+	$amp: get-ampersand();
 
-@mixin generate-colors($shorthand, $property, $rgb-map, $opacity-range) {
-	$amp: get-dynamic-ampersand();
-
-	@each $k, $v in new-rgba-map($rgb-map, var(--text-opacity)) {
-		#{$amp}#{$shorthand}-#{$k} {
-			#{$property}: #{$v};
+	@each $k, $v in $map {
+		#{$amp}#{$shorthand}-#{escape($k)} {
+			@if $k == transparent or $k == currentColor {
+				color: #{$v};
+			} @else {
+				--#{$shorthand}-opacity: 1;
+				#{$prop}: $v;
+				#{$prop}: string.unquote(
+					"rgba(#{color.red($v)}, #{color.green($v)}, #{color.blue($v)}, #{var(--#{$shorthand}-opacity)})"
+				);
+			}
 		}
 	}
 	@each $v in $opacity-range {
-		#{$amp}#{$shorthand}-opacity-#{$v * 100} {
+		#{$amp}#{$shorthand}-opacity-#{escape($v * 100)} {
 			--#{$shorthand}-opacity: #{$v};
 		}
 	}
 }
 
-@mixin color($rgb-map, $opacity-range) {
-	@include generate-colors("text", color, $rgb-map, $opacity-range);
+@mixin color-from-map($map, $opacity-range) {
+	@include generate-colors-from-map("text", color, $map, $opacity-range);
 }
-@mixin background-color($rgb-map, $opacity-range) {
-	@include generate-colors("bg", color, $rgb-map, $opacity-range);
+@mixin background-color-from-map($map, $opacity-range) {
+	@include generate-colors-from-map("bg", color, $map, $opacity-range);
 }
-@mixin border-color($rgb-map, $opacity-range) {
-	@include generate-colors("border", color, $rgb-map, $opacity-range);
-}
-
-// prettier-ignore
-$rgb-map: (
-	"transparent": transparent,
-	"current": currentColor,
-	"black": (0, 0, 0),
-	"white": (255, 255, 255),
-	"gray-50": (250, 250, 250),
-	"gray-100": (244, 244, 245),
-	"gray-200": (228, 228, 231),
-	"gray-300": (212, 212, 216),
-	"gray-400": (161, 161, 170),
-	"gray-500": (113, 113, 122),
-	"gray-600": (82, 82, 91),
-	"gray-700": (63, 63, 70),
-	"gray-800": (39, 39, 42),
-	"gray-900": (24, 24, 27),
-	"red-50": (254, 242, 242),
-	"red-100": (254, 226, 226),
-	"red-200": (254, 202, 202),
-	"red-300": (252, 165, 165),
-	"red-400": (248, 113, 113),
-	"red-500": (239, 68, 68),
-	"red-600": (220, 38, 38),
-	"red-700": (185, 28, 28),
-	"red-800": (153, 27, 27),
-	"red-900": (127, 29, 29),
-	"yellow-50": (255, 251, 235),
-	"yellow-100": (254, 243, 199),
-	"yellow-200": (253, 230, 138),
-	"yellow-300": (252, 211, 77),
-	"yellow-400": (251, 191, 36),
-	"yellow-500": (245, 158, 11),
-	"yellow-600": (217, 119, 6),
-	"yellow-700": (180, 83, 9),
-	"yellow-800": (146, 64, 14),
-	"yellow-900": (120, 53, 15),
-	"green-50": (236, 253, 245),
-	"green-100": (209, 250, 229),
-	"green-200": (167, 243, 208),
-	"green-300": (110, 231, 183),
-	"green-400": (52, 211, 153),
-	"green-500": (16, 185, 129),
-	"green-600": (5, 150, 105),
-	"green-700": (4, 120, 87),
-	"green-800": (6, 95, 70),
-	"green-900": (6, 78, 59),
-	"blue-50": (239, 246, 255),
-	"blue-100": (219, 234, 254),
-	"blue-200": (191, 219, 254),
-	"blue-300": (147, 197, 253),
-	"blue-400": (96, 165, 250),
-	"blue-500": (59, 130, 246),
-	"blue-600": (37, 99, 235),
-	"blue-700": (29, 78, 216),
-	"blue-800": (30, 64, 175),
-	"blue-900": (30, 58, 138),
-	"purple-50": (245, 243, 255),
-	"purple-100": (237, 233, 254),
-	"purple-200": (221, 214, 254),
-	"purple-300": (196, 181, 253),
-	"purple-400": (167, 139, 250),
-	"purple-500": (139, 92, 246),
-	"purple-600": (124, 58, 237),
-	"purple-700": (109, 40, 217),
-	"purple-800": (91, 33, 182),
-	"purple-900": (76, 29, 149),
-	"pink-50": (253, 242, 248),
-	"pink-100": (252, 231, 243),
-	"pink-200": (251, 207, 232),
-	"pink-300": (249, 168, 212),
-	"pink-400": (244, 114, 182),
-	"pink-500": (236, 72, 153),
-	"pink-600": (219, 39, 119),
-	"pink-700": (190, 24, 93),
-	"pink-800": (157, 23, 77),
-	"pink-900": (131, 24, 67),
-) !default;
-
-// prettier-ignore
-$opacity-range: (
-	0,
-	0.05,
-	0.1,
-	0.15,
-	0.2,
-	0.25,
-	1 - 0.25,
-	1 - 0.2,
-	1 - 0.15,
-	1 - 0.1,
-	1 - 0.05,
-	1 - 0,
-) !default;
-
-// prettier-ignore
-$breakpoint-map: (
-	sm: 40 * 16, // ->  640
-	md: 48 * 16, // ->  768
-	lg: 64 * 16, // -> 1024
-	xl: 80 * 16, // -> 1280
-) !default;
-
-@mixin colors {
-	@include color($rgb-map, $opacity-range);
-	@include background-color($rgb-map, $opacity-range);
-	@include border-color($rgb-map, $opacity-range);
+@mixin border-color-from-map($map, $opacity-range) {
+	@include generate-colors-from-map("border", color, $map, $opacity-range);
 }
 
-@mixin run {
-	@include colors;
+@at-root {
+	@include color-from-map($map: $color-map, $opacity-range: $opacity-range);
+	@include background-color-from-map($map: $color-map, $opacity-range: $opacity-range);
+	@include border-color-from-map($map: $color-map, $opacity-range: $opacity-range);
 	@each $k, $v in $breakpoint-map {
 		@media (min-width: #{$v + px}) {
 			.#{$k} {
 				@at-root {
-					@include colors;
+					@include color-from-map($map: $color-map, $opacity-range: $opacity-range);
+					@include background-color-from-map($map: $color-map, $opacity-range: $opacity-range);
+					@include border-color-from-map($map: $color-map, $opacity-range: $opacity-range);
 				}
 			}
 		}

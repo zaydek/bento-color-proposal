@@ -1,0 +1,301 @@
+.text-transparent {
+  color: transparent;
+}
+
+.text-currentColor {
+  color: currentColor;
+}
+
+.text-black {
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+}
+
+.text-white {
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.text-red {
+  --text-opacity: 1;
+  color: #f00;
+  color: rgba(255, 0, 0, var(--text-opacity));
+}
+
+.text-green {
+  --text-opacity: 1;
+  color: #0f0;
+  color: rgba(0, 255, 0, var(--text-opacity));
+}
+
+.text-blue {
+  --text-opacity: 1;
+  color: #00f;
+  color: rgba(0, 0, 255, var(--text-opacity));
+}
+
+.text-opacity-0 {
+  --text-opacity: 0;
+}
+
+.text-opacity-50 {
+  --text-opacity: 0.5;
+}
+
+.text-opacity-100 {
+  --text-opacity: 1;
+}
+
+.bg-transparent {
+  color: transparent;
+}
+
+.bg-currentColor {
+  color: currentColor;
+}
+
+.bg-black {
+  --bg-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--bg-opacity));
+}
+
+.bg-white {
+  --bg-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.bg-red {
+  --bg-opacity: 1;
+  color: #f00;
+  color: rgba(255, 0, 0, var(--bg-opacity));
+}
+
+.bg-green {
+  --bg-opacity: 1;
+  color: #0f0;
+  color: rgba(0, 255, 0, var(--bg-opacity));
+}
+
+.bg-blue {
+  --bg-opacity: 1;
+  color: #00f;
+  color: rgba(0, 0, 255, var(--bg-opacity));
+}
+
+.bg-opacity-0 {
+  --bg-opacity: 0;
+}
+
+.bg-opacity-50 {
+  --bg-opacity: 0.5;
+}
+
+.bg-opacity-100 {
+  --bg-opacity: 1;
+}
+
+.border-transparent {
+  color: transparent;
+}
+
+.border-currentColor {
+  color: currentColor;
+}
+
+.border-black {
+  --border-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--border-opacity));
+}
+
+.border-white {
+  --border-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--border-opacity));
+}
+
+.border-red {
+  --border-opacity: 1;
+  color: #f00;
+  color: rgba(255, 0, 0, var(--border-opacity));
+}
+
+.border-green {
+  --border-opacity: 1;
+  color: #0f0;
+  color: rgba(0, 255, 0, var(--border-opacity));
+}
+
+.border-blue {
+  --border-opacity: 1;
+  color: #00f;
+  color: rgba(0, 0, 255, var(--border-opacity));
+}
+
+.border-opacity-0 {
+  --border-opacity: 0;
+}
+
+.border-opacity-50 {
+  --border-opacity: 0.5;
+}
+
+.border-opacity-100 {
+  --border-opacity: 1;
+}
+
+@media (min-width: 1344px) {
+  .xl\:text-transparent {
+    color: transparent;
+  }
+
+  .xl\:text-currentColor {
+    color: currentColor;
+  }
+
+  .xl\:text-black {
+    --text-opacity: 1;
+    color: #000;
+    color: rgba(0, 0, 0, var(--text-opacity));
+  }
+
+  .xl\:text-white {
+    --text-opacity: 1;
+    color: #fff;
+    color: rgba(255, 255, 255, var(--text-opacity));
+  }
+
+  .xl\:text-red {
+    --text-opacity: 1;
+    color: #f00;
+    color: rgba(255, 0, 0, var(--text-opacity));
+  }
+
+  .xl\:text-green {
+    --text-opacity: 1;
+    color: #0f0;
+    color: rgba(0, 255, 0, var(--text-opacity));
+  }
+
+  .xl\:text-blue {
+    --text-opacity: 1;
+    color: #00f;
+    color: rgba(0, 0, 255, var(--text-opacity));
+  }
+
+  .xl\:text-opacity-0 {
+    --text-opacity: 0;
+  }
+
+  .xl\:text-opacity-50 {
+    --text-opacity: 0.5;
+  }
+
+  .xl\:text-opacity-100 {
+    --text-opacity: 1;
+  }
+
+  .xl\:bg-transparent {
+    color: transparent;
+  }
+
+  .xl\:bg-currentColor {
+    color: currentColor;
+  }
+
+  .xl\:bg-black {
+    --bg-opacity: 1;
+    color: #000;
+    color: rgba(0, 0, 0, var(--bg-opacity));
+  }
+
+  .xl\:bg-white {
+    --bg-opacity: 1;
+    color: #fff;
+    color: rgba(255, 255, 255, var(--bg-opacity));
+  }
+
+  .xl\:bg-red {
+    --bg-opacity: 1;
+    color: #f00;
+    color: rgba(255, 0, 0, var(--bg-opacity));
+  }
+
+  .xl\:bg-green {
+    --bg-opacity: 1;
+    color: #0f0;
+    color: rgba(0, 255, 0, var(--bg-opacity));
+  }
+
+  .xl\:bg-blue {
+    --bg-opacity: 1;
+    color: #00f;
+    color: rgba(0, 0, 255, var(--bg-opacity));
+  }
+
+  .xl\:bg-opacity-0 {
+    --bg-opacity: 0;
+  }
+
+  .xl\:bg-opacity-50 {
+    --bg-opacity: 0.5;
+  }
+
+  .xl\:bg-opacity-100 {
+    --bg-opacity: 1;
+  }
+
+  .xl\:border-transparent {
+    color: transparent;
+  }
+
+  .xl\:border-currentColor {
+    color: currentColor;
+  }
+
+  .xl\:border-black {
+    --border-opacity: 1;
+    color: #000;
+    color: rgba(0, 0, 0, var(--border-opacity));
+  }
+
+  .xl\:border-white {
+    --border-opacity: 1;
+    color: #fff;
+    color: rgba(255, 255, 255, var(--border-opacity));
+  }
+
+  .xl\:border-red {
+    --border-opacity: 1;
+    color: #f00;
+    color: rgba(255, 0, 0, var(--border-opacity));
+  }
+
+  .xl\:border-green {
+    --border-opacity: 1;
+    color: #0f0;
+    color: rgba(0, 255, 0, var(--border-opacity));
+  }
+
+  .xl\:border-blue {
+    --border-opacity: 1;
+    color: #00f;
+    color: rgba(0, 0, 255, var(--border-opacity));
+  }
+
+  .xl\:border-opacity-0 {
+    --border-opacity: 0;
+  }
+
+  .xl\:border-opacity-50 {
+    --border-opacity: 0.5;
+  }
+
+  .xl\:border-opacity-100 {
+    --border-opacity: 1;
+  }
+}

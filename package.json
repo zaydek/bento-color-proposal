@@ -2,7 +2,7 @@
 	"name": "duomo-color-proposal",
 	"license": "MIT",
 	"scripts": {
-		"start": "sass --no-source-map src/consumer.scss src/out.css"
+		"build": "sass --no-charset --no-source-map src/consumer.scss public/out.css"
 	},
 	"devDependencies": {
 		"sass": "^1.29.0"
